@@ -16,4 +16,12 @@ class Node{
         }
         n.next = end;
     }
+    void print() {
+    	Node n = this;
+    	while(n.next != null) {
+    		System.out.println(n.data);
+    		n = n.next;
+    	}
+    	System.out.println(n.data);
+    }
 }
