@@ -1,11 +1,18 @@
 package Linked_List;
 
+import Linked_List.LinkedList.Node;
+
 class LinkedList{
 	Node header;
 	
-	class Node{	
+	static class Node{	
+		
 		int data;
 		Node next = null;	
+		
+		Node() {}
+		Node(int data2) { this.data = data2; }
+		
 	}
 	
 	LinkedList(){
@@ -106,5 +113,6 @@ class LinkedList{
     void reset() {
     	header = new Node(); 
     }
+    
     
 }
