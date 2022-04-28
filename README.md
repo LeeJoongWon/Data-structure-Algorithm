@@ -8,4 +8,5 @@
 
 노드에는 data와 다음 노드를 가리키는 포인터인next를 포함
 
+
 ﻿LinearSearch  - 선형 검색
