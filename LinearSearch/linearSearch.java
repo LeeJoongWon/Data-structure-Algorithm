@@ -25,9 +25,9 @@ public class linearSearch {
 		b = seqSearch(a,3);
 		
 		if(b == -1) {
-			System.out.println("¿ä¼Ò¿¡ °ªÀÌ ¾ø½À´Ï´Ù");
+			System.out.println("ìš”ì†Œì— ê°’ì´ ì—†ìŠµë‹ˆë‹¤");
 		}else {
-			System.out.println("key°ªÀº x["+b+"]¿¡ ÀÖ½À´Ï´Ù");
+			System.out.println("keyê°’ì€ x["+b+"]ì— ìˆìŠµë‹ˆë‹¤");
 		}
 		
 	}
