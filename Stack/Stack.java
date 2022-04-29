@@ -4,14 +4,14 @@ public class Stack <T> {
 	private T[] stk;	//스택 본체
 	
 	// 실행할 때 예외：스택이 비어 있음
-	public static class EmptyGstackException extends RuntimeException {
-		public EmptyGstackException() {
+	public static class EmptyStackException extends RuntimeException {
+		public EmptyStackException() {
 		}
 	}
 
 	// 실행할 때 예외：스택이 가득 참
-	public static class OverflowGstackException extends RuntimeException {
-		public OverflowGstackException() {
+	public static class OverflowStackException extends RuntimeException {
+		public OverflowStackException() {
 		}
 	}
 	
@@ -26,25 +26,25 @@ public class Stack <T> {
 	}
 	
 	//데이터를 푸시
-	public T push(T x) throws OverflowGstackException {
+	public T push(T x) throws OverflowStackException {
 		if(ptr >= max) {	//스택이 가득 찼을경우
-			throw new OverflowGstackException();
+			throw new OverflowStackException();
 		}
 		return stk[ptr++] = x;
 	}
 	
 	//데이터를 꺼냄
-	public T pop() throws EmptyGstackException{
+	public T pop() throws EmptyStackException{
 		if(ptr <= 0) {	//스택이 비었을 경우
-			throw new EmptyGstackException();
+			throw new EmptyStackException();
 		}
 		return stk[--ptr];
 	}
 	
 	//데이터를 피크
-	public T peek() throws EmptyGstackException{
+	public T peek() throws EmptyStackException{
 		if(ptr <= 0) {
-			throw new EmptyGstackException();
+			throw new EmptyStackException();
 		}
 		return stk[ptr - 1];
 	}
