@@ -26,11 +26,11 @@ public class Stack <T> {
 	}
 	
 	//데이터를 푸시
-	public T push(T x) throws OverflowStackException {
+	public void push(T x) throws OverflowStackException {
 		if(ptr >= max) {	//스택이 가득 찼을경우
 			throw new OverflowStackException();
 		}
-		return stk[ptr++] = x;
+		stk[ptr++] = x;
 	}
 	
 	//데이터를 꺼냄
