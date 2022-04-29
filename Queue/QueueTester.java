@@ -8,8 +8,8 @@ public class QueueTester {
 		
 		while(true) {
 			String s;
-			System.out.println("ÇöÀç µ¥ÀÌÅÍ ¼ö:" + queue.size() +"/"+queue.capacity());
-			System.out.print("(1)Çª½Ã (2)ÆË (3)ÇÇÅ© (4)´ıÇÁ (0)Á¾·á:");
+			System.out.println("í˜„ì¬ ë°ì´í„° ìˆ˜:" + queue.size() +"/"+queue.capacity());
+			System.out.print("(1)í‘¸ì‹œ (2)íŒ (3)í”¼í¬ (4)ë¤í”„ (0)ì¢…ë£Œ:");
 			
 			int menu = scanner.nextInt();
 			
@@ -18,30 +18,30 @@ public class QueueTester {
 			switch (menu) {
 			
 			case 1:
-				System.out.print("µ¥ÀÌÅÍ:");
+				System.out.print("ë°ì´í„°:");
 				s = scanner.next();
 				try {
 					queue.enque(s);
 				} catch (Queue.OverflowQueueException e) {
-					System.out.println("Å¥°¡ °¡µæ Ã¡½À´Ï´Ù");
+					System.out.println("íê°€ ê°€ë“ ì°¼ìŠµë‹ˆë‹¤");
 				}
 				break;
 
 			case 2:
 				try {
 					s = (String)queue.deque();
-					System.out.println("µğÅ¥ ÇÑ µ¥ÀÌÅÍ´Â "+s);
+					System.out.println("ë””í í•œ ë°ì´í„°ëŠ” "+s);
 				} catch (Queue.EmptyQueueException e) {
-					System.out.println("Å¥°¡ ºñ¾îÀÖ½À´Ï´Ù");
+					System.out.println("íê°€ ë¹„ì–´ìˆìŠµë‹ˆë‹¤");
 				}
 				break;
 				
 			case 3:
 				try {
 					s = (String)queue.peek();
-					System.out.println("ÇÇÅ© ÇÑ µ¥ÀÌÅÍ´Â "+s);
+					System.out.println("í”¼í¬ í•œ ë°ì´í„°ëŠ” "+s);
 				} catch (Queue.EmptyQueueException e) {
-					System.out.println("Å¥°¡ ºñ¾îÀÖ½À´Ï´Ù");
+					System.out.println("íê°€ ë¹„ì–´ìˆìŠµë‹ˆë‹¤");
 				}
 				break;
 				
