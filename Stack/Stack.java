@@ -1,15 +1,15 @@
 public class Stack <T> {
-	private int max;	//½ºÅÃ ¿ë·®
-	private int ptr;	//½ºÅÃ Æ÷ÀÎÅÍ
-	private T[] stk;	//½ºÅÃ º»Ã¼
+	private int max;	//ìŠ¤íƒ ìš©ëŸ‰
+	private int ptr;	//ìŠ¤íƒ í¬ì¸í„°
+	private T[] stk;	//ìŠ¤íƒ ë³¸ì²´
 	
-	// ½ÇÇàÇÒ ¶§ ¿¹¿Ü£º½ºÅÃÀÌ ºñ¾î ÀÖÀ½
+	// ì‹¤í–‰í•  ë•Œ ì˜ˆì™¸ï¼šìŠ¤íƒì´ ë¹„ì–´ ìˆìŒ
 	public static class EmptyGstackException extends RuntimeException {
 		public EmptyGstackException() {
 		}
 	}
 
-	// ½ÇÇàÇÒ ¶§ ¿¹¿Ü£º½ºÅÃÀÌ °¡µæ Âü
+	// ì‹¤í–‰í•  ë•Œ ì˜ˆì™¸ï¼šìŠ¤íƒì´ ê°€ë“ ì°¸
 	public static class OverflowGstackException extends RuntimeException {
 		public OverflowGstackException() {
 		}
@@ -25,23 +25,23 @@ public class Stack <T> {
 		}
 	}
 	
-	//µ¥ÀÌÅÍ¸¦ Çª½Ã
+	//ë°ì´í„°ë¥¼ í‘¸ì‹œ
 	public T push(T x) throws OverflowGstackException {
-		if(ptr >= max) {	//½ºÅÃÀÌ °¡µæ Ã¡À»°æ¿ì
+		if(ptr >= max) {	//ìŠ¤íƒì´ ê°€ë“ ì°¼ì„ê²½ìš°
 			throw new OverflowGstackException();
 		}
 		return stk[ptr++] = x;
 	}
 	
-	//µ¥ÀÌÅÍ¸¦ ²¨³¿
+	//ë°ì´í„°ë¥¼ êº¼ëƒ„
 	public T pop() throws EmptyGstackException{
-		if(ptr <= 0) {	//½ºÅÃÀÌ ºñ¾úÀ» °æ¿ì
+		if(ptr <= 0) {	//ìŠ¤íƒì´ ë¹„ì—ˆì„ ê²½ìš°
 			throw new EmptyGstackException();
 		}
 		return stk[--ptr];
 	}
 	
-	//µ¥ÀÌÅÍ¸¦ ÇÇÅ©
+	//ë°ì´í„°ë¥¼ í”¼í¬
 	public T peek() throws EmptyGstackException{
 		if(ptr <= 0) {
 			throw new EmptyGstackException();
@@ -49,7 +49,7 @@ public class Stack <T> {
 		return stk[ptr - 1];
 	}
 	
-	//°Ë»ö
+	//ê²€ìƒ‰
 	public int indexOf(T x) {		
 		for(int i = ptr-1; i>=0; i--) {
 			
@@ -60,10 +60,10 @@ public class Stack <T> {
 		return -1;		
 	}
 	
-	// ½ºÅÃ ¾ÈÀÇ µ¥ÀÌÅÍ¸¦ ¹Ù´Ú¡æ²À´ë±âÀÇ Â÷·Ê·Î Ãâ·ÂÇÔ
+	// ìŠ¤íƒ ì•ˆì˜ ë°ì´í„°ë¥¼ ë°”ë‹¥â†’ê¼­ëŒ€ê¸°ì˜ ì°¨ë¡€ë¡œ ì¶œë ¥í•¨
 	public void dump() {
 		if (ptr <= 0) {
-			System.out.println("½ºÅÃÀÌ ºñ¾ú½À´Ï´Ù.");
+			System.out.println("ìŠ¤íƒì´ ë¹„ì—ˆìŠµë‹ˆë‹¤.");
 		}else {
 			for (int i = 0; i < ptr; i++) {
 				System.out.println(stk[i] + " ");
@@ -71,27 +71,27 @@ public class Stack <T> {
 		}
 	}
 	
-	// ½ºÅÃÀ» ºñ¿ò
+	// ìŠ¤íƒì„ ë¹„ì›€
 	public void clear() {
 		ptr = 0;
 	}
 
-	// ½ºÅÃÀÇ ¿ë·®À» ¹İÈ¯
+	// ìŠ¤íƒì˜ ìš©ëŸ‰ì„ ë°˜í™˜
 	public int capacity() {
 		return max;
 	}
 
-	// ½ºÅÃ¿¡ ½×¿©ÀÖ´Â µ¥ÀÌÅÍ ¼ö¸¦ ¹İÈ¯
+	// ìŠ¤íƒì— ìŒ“ì—¬ìˆëŠ” ë°ì´í„° ìˆ˜ë¥¼ ë°˜í™˜
 	public int size() {
 		return ptr;
 	}
 
-	// ½ºÅÃÀÌ ºñ¾î ÀÖ´Â°¡?
+	// ìŠ¤íƒì´ ë¹„ì–´ ìˆëŠ”ê°€?
 	public boolean isEmpty() {
 		return ptr <= 0;
 	}
 
-	// ½ºÅÃÀÌ °¡µæ Ã¡´Â°¡?
+	// ìŠ¤íƒì´ ê°€ë“ ì°¼ëŠ”ê°€?
 	public boolean isFull() {
 		return ptr >= max;
 	}
