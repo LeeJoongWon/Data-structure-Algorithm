@@ -23,7 +23,7 @@ public class StackTester {
 				s = scanner.next();
 				try {
 					stack.push(s);
-				} catch (Stack.OverflowGstackException e) {
+				} catch (Stack.OverflowStackException e) {
 					System.out.println("스택이 가득 찼습니다");
 				}
 				break;
@@ -32,7 +32,7 @@ public class StackTester {
 				try {
 					s = (String)stack.pop();
 					System.out.println("팝 한 데이터는 "+s);
-				} catch (Stack.EmptyGstackException e) {
+				} catch (Stack.EmptyStackException e) {
 					System.out.println("스택이 비어있습니다");
 				}
 				break;
@@ -41,7 +41,7 @@ public class StackTester {
 				try {
 					s = (String)stack.peek();
 					System.out.println("피크 한 데이터는 "+s);
-				} catch (Stack.EmptyGstackException e) {
+				} catch (Stack.EmptyStackException e) {
 					System.out.println("스택이 비어있습니다");
 				}
 				break;
