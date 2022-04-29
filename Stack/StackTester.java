@@ -7,8 +7,8 @@ public class StackTester {
 		
 		while(true) {
 			String s;
-			System.out.println("ÇöÀç µ¥ÀÌÅÍ ¼ö:" + stack.size() +"/"+stack.capacity());
-			System.out.print("(1)Çª½Ã (2)ÆË (3)ÇÇÅ© (4)´ıÇÁ (0)Á¾·á:");
+			System.out.println("í˜„ì¬ ë°ì´í„° ìˆ˜:" + stack.size() +"/"+stack.capacity());
+			System.out.print("(1)í‘¸ì‹œ (2)íŒ (3)í”¼í¬ (4)ë¤í”„ (0)ì¢…ë£Œ:");
 			
 			int menu = scanner.nextInt();
 			
@@ -19,30 +19,30 @@ public class StackTester {
 			switch (menu) {
 			
 			case 1:
-				System.out.print("µ¥ÀÌÅÍ:");
+				System.out.print("ë°ì´í„°:");
 				s = scanner.next();
 				try {
 					stack.push(s);
 				} catch (Stack.OverflowGstackException e) {
-					System.out.println("½ºÅÃÀÌ °¡µæ Ã¡½À´Ï´Ù");
+					System.out.println("ìŠ¤íƒì´ ê°€ë“ ì°¼ìŠµë‹ˆë‹¤");
 				}
 				break;
 
 			case 2:
 				try {
 					s = (String)stack.pop();
-					System.out.println("ÆË ÇÑ µ¥ÀÌÅÍ´Â "+s);
+					System.out.println("íŒ í•œ ë°ì´í„°ëŠ” "+s);
 				} catch (Stack.EmptyGstackException e) {
-					System.out.println("½ºÅÃÀÌ ºñ¾îÀÖ½À´Ï´Ù");
+					System.out.println("ìŠ¤íƒì´ ë¹„ì–´ìˆìŠµë‹ˆë‹¤");
 				}
 				break;
 				
 			case 3:
 				try {
 					s = (String)stack.peek();
-					System.out.println("ÇÇÅ© ÇÑ µ¥ÀÌÅÍ´Â "+s);
+					System.out.println("í”¼í¬ í•œ ë°ì´í„°ëŠ” "+s);
 				} catch (Stack.EmptyGstackException e) {
-					System.out.println("½ºÅÃÀÌ ºñ¾îÀÖ½À´Ï´Ù");
+					System.out.println("ìŠ¤íƒì´ ë¹„ì–´ìˆìŠµë‹ˆë‹¤");
 				}
 				break;
 				
