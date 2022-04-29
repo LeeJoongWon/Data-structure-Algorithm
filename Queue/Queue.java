@@ -1,17 +1,17 @@
 public class Queue<T>{
-	private int max;	//Å¥ÀÇ ¿ë·®
-	private int front;	//Ã¹¹øÂ° ¿ä¼Ò
-	private int rear;	//¸¶Áö¸· ¿ä¼Ò
-	private int num;	//ÇöÀç µ¥ÀÌÅÍ ¼ö
-	private T[] queue;	//Å¥ º»Ã¼
+	private int max;	//íì˜ ìš©ëŸ‰
+	private int front;	//ì²«ë²ˆì§¸ ìš”ì†Œ
+	private int rear;	//ë§ˆì§€ë§‰ ìš”ì†Œ
+	private int num;	//í˜„ì¬ ë°ì´í„° ìˆ˜
+	private T[] queue;	//í ë³¸ì²´
 	
-	//Å¥°¡ ºñ¾îÀÖÀ½
+	//íê°€ ë¹„ì–´ìˆìŒ
 	public static class EmptyQueueException extends RuntimeException {
 		public EmptyQueueException() {
 		}
 	}
 
-	//Å¥°¡ °¡µæ Âü
+	//íê°€ ê°€ë“ ì°¸
 	public static class OverflowQueueException extends RuntimeException {
 		public OverflowQueueException() {
 		}
@@ -19,7 +19,7 @@ public class Queue<T>{
 	
 	public Queue(int capacity){
 		
-		num = front = rear = 0; //¸ğµÎ 0À¸·Î ÃÊ±âÈ­
+		num = front = rear = 0; //ëª¨ë‘ 0ìœ¼ë¡œ ì´ˆê¸°í™”
 		max = capacity;
 		
 		try {
@@ -33,7 +33,7 @@ public class Queue<T>{
 	public void enque(T x) throws OverflowQueueException {
 		
 		if (num >= max)
-			throw new OverflowQueueException(); // Å¥°¡ °¡µæ Âü
+			throw new OverflowQueueException(); // íê°€ ê°€ë“ ì°¸
 		
 		queue[rear++] = x;
 		num++;
@@ -43,11 +43,11 @@ public class Queue<T>{
 		
 	}
 
-	// Å¥¿¡¼­ µ¥ÀÌÅÍ¸¦ µğÅ¥
+	// íì—ì„œ ë°ì´í„°ë¥¼ ë””í
 	public T deque() throws EmptyQueueException {
 		
 		if (num <= 0)
-			throw new EmptyQueueException(); // Å¥°¡ ºñ¾î ÀÖÀ½
+			throw new EmptyQueueException(); // íê°€ ë¹„ì–´ ìˆìŒ
 		
 		T x = queue[front++];
 		num--;
@@ -103,7 +103,7 @@ public class Queue<T>{
 	
 	public void dump() {
 		if(num <= 0) {
-			System.out.println("Å¥°¡ ºñ¾îÀÖ½À´Ï´Ù");
+			System.out.println("íê°€ ë¹„ì–´ìˆìŠµë‹ˆë‹¤");
 		}else {
 			for(int i = 0; i < num; i++) {
 				System.out.println(queue[(i + front) % max]);
