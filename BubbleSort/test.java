@@ -30,10 +30,10 @@ public class test {
 		int[] a = {6,4,3,7,1,9,8};
 		bubbleSort(a,a.length); 		
 		System.out.println("오름차순으로 정렬했습니다.");		
-	    for (int i = 0; i < a.length; i++) {
-	    	System.out.println("x[" + i + "]=" + a[i]);
+	    	for (int i = 0; i < a.length; i++) {
+	    		System.out.println("x[" + i + "]=" + a[i]);
 	    	
-	    }
+	    	}
 	       	
 	}
 	
