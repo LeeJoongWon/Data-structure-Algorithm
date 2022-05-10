@@ -8,4 +8,6 @@ BinarySearch  - 이진 검색
 
 Stack - 스택
 
+Queue - 큐
+
 BubbleSort - 버블 정렬
