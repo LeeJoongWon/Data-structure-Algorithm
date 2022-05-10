@@ -11,3 +11,5 @@ Stack - 스택
 Queue - 큐
 
 BubbleSort - 버블 정렬
+
+Selection sort - 단순 선택 정렬
