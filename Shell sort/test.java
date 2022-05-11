@@ -14,13 +14,13 @@ public class test {
 
         for ( ; gap > 0; gap /= 3) {
         	for (int i = gap; i < length; i++) {
-                int j;
-                int tmp = list[i];
-                for (j = i - gap; j >= 0 && list[j] > tmp; j -= gap) {
-                	list[j + gap] = list[j];
-                }
-                list[j + gap] = tmp;
-            }
+                	int j;
+               		int tmp = list[i];
+                	for (j = i - gap; j >= 0 && list[j] > tmp; j -= gap) {
+                		list[j + gap] = list[j];
+                	}
+                	list[j + gap] = tmp;
+            	}
         }   
     }
 	
