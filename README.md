@@ -19,3 +19,5 @@ Insertion sort - 삽입 정렬
 Shell sort - 셸 정렬
 
 QuickSort - 퀵 정렬
+
+MergeSort - 병합정렬
