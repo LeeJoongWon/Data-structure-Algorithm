@@ -20,4 +20,6 @@ Shell sort - 셸 정렬
 
 QuickSort - 퀵 정렬
 
-MergeSort - 병합정렬
+MergeSort - 병합 정렬
+
+HeapSort - 힙 정렬
