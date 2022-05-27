@@ -23,3 +23,5 @@ QuickSort - 퀵 정렬
 MergeSort - 병합 정렬
 
 HeapSort - 힙 정렬
+
+CountingSort - 도수정렬(계수정렬)
