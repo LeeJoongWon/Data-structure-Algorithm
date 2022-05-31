@@ -25,3 +25,5 @@ MergeSort - 병합 정렬
 HeapSort - 힙 정렬
 
 CountingSort - 도수정렬(계수정렬)
+
+BruteForce - 브루트-포스법
