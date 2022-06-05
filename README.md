@@ -26,4 +26,5 @@ HeapSort - 힙 정렬
 
 CountingSort - 도수정렬(계수정렬)
 
-BruteForce - 브루트-포스법
+BruteForce - 브루트-포스법(문자열 검색
+KMP - KMP(문자열 검색)
