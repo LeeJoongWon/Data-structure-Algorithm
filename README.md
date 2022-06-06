@@ -29,4 +29,6 @@ CountingSort - 도수정렬(계수정렬)
 BruteForce - 브루트-포스법(문자열 검색)
 
 
-KMP - 커누스-모리스-프랫 알고리즘(Knuth–Morris–Pratt algorithm) (문자열 검색)
+KMP - 커누스-모리스-프랫(Knuth–Morris–Pratt algorithm) (문자열 검색)
+
+BoyerMoore - 보이어 무어 (문자열 검색)
